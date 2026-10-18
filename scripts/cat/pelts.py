@@ -17,28 +17,18 @@ class Pelt:
     all_poses = sprites.POSE_DATA["poses"]
     newborn_poses = [x for x in all_poses if "newborn" in x]
     kitten_poses = [x for x in all_poses if "kitten" in x and "sick" not in x]
-    adolescent_long_poses = [
-        x for x in all_poses if "adolescent_long" in x and "sick" not in x
+    adolescent_poses = [
+        x for x in all_poses if "adolescent" in x and "sick" not in x
     ]
-    adolescent_short_poses = [
+    adult_poses = [
         x
         for x in all_poses
-        if "adolescent" in x and "long" not in x and "sick" not in x
-    ]
-    adult_short_poses = [
-        x
-        for x in all_poses
-        if "adult_short" in x and "para" not in x and "sick" not in x
-    ]
-    adult_long_poses = [
-        x
-        for x in all_poses
-        if "adult_long" in x and "para" not in x and "sick" not in x
+        if "adult" in x and "para" not in x and "sick" not in x
     ]
     senior_poses = [x for x in all_poses if "senior" in x and "sick" not in x]
 
     # PELT LENGTH
-    pelt_length = ["short", "medium", "long"]
+    pelt_length = ["medium"]
 
     # PELT COLOURS
     all_pelt_colours: list = []
@@ -897,7 +887,8 @@ class Pelt:
             "newborn": random.choice(self.newborn_poses),
             "kitten": random.choice(self.kitten_poses),
             "senior": random.choice(self.senior_poses),
-            "para_young": "para_young0",
+            "para_adolescent": "para_adolescent0",
+            "para_kitten": "para_kitten0",
         }
         self.reverse = bool(random.getrandbits(1))
         # skin chances
@@ -916,9 +907,9 @@ class Pelt:
             )
             self.cat_sprites["para_adult"] = "para_adult_long0"
         else:
-            self.cat_sprites["adolescent"] = random.choice(self.adolescent_short_poses)
-            self.cat_sprites["adult"] = random.choice(self.adult_short_poses)
-            self.cat_sprites["para_adult"] = "para_adult_short0"
+            self.cat_sprites["adolescent"] = random.choice(self.adolescent_poses)
+            self.cat_sprites["adult"] = random.choice(self.adult_poses)
+            self.cat_sprites["para_adult"] = "para_adult_0"
 
         self.cat_sprites["young adult"] = self.cat_sprites["adult"]
         self.cat_sprites["senior adult"] = self.cat_sprites["adult"]

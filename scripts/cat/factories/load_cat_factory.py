@@ -257,6 +257,8 @@ class LoadCatFactory(BaseCatFactory):
                     "sprite_senior", kwargs.get("spirit_senior")
                 ),
                 "para_adult_sprite": kwargs.get("sprite_para_adult"),
+                "para_adolescent_sprite": kwargs.get("sprite_para_adolescent"),
+                "para_kitten_sprite": kwargs.get("sprite_para_kitten"),
                 "reverse": kwargs["reverse"],
                 "vitiligo": kwargs.get("vitiligo"),
                 "points": kwargs.get("points"),
