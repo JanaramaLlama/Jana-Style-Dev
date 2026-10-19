@@ -11,7 +11,7 @@
         "shader_lighting",
         "shader_mask"
     ],
-    "sheet_layout": [4, 8],
+    "sheet_layout": [4, 7],
     "poses": [
         "newborn0",
         "newborn1",
@@ -25,10 +25,6 @@
         "adolescent1",
         "adolescent2",
         "sick_adolescent0",
-        "adolescent3",
-        "adolescent4",
-        "adolescent5",
-        "",
         "adult0",
         "adult1",
         "adult2",
